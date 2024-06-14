@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,34 +9,34 @@ const Nav = () => {
   };
   return (
     <>
-      <nav className="bg-gray-800 p-4">
+      <nav className="bg-gray-800 p-4 sticky top-0 z-50 ">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <a href="#" className="text-white text-xl font-bold">
+            <Link to="/" className="text-white text-xl font-bold">
               URL DETECTOR
-            </a>
+            </Link>
           </div>
           <div className="hidden md:block">
             <ul className="space-x-4 md:flex md:justify-between gap-2">
               <li>
-                <a href="#" className="text-white">
+                <Link to="/" className="text-white">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
+                <Link to="/about" className="text-white">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
-                  Services
-                </a>
+                <Link to="/aiengine" className="text-white">
+                 AI Engine
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white">
-                  Contact
-                </a>
+                <Link to="/login" className="text-white">
+                  Login
+                </Link>
               </li>
             </ul>
           </div>
@@ -58,24 +59,24 @@ const Nav = () => {
           <div className="bg-gray-800 py-2 px-4 md:hidden">
             <ul>
               <li>
-                <a href="#" className="block text-white py-2">
+                <Link to="/" className="block text-white py-2">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block text-white py-2">
+                <Link to="/about" className="block text-white py-2">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block text-white py-2">
-                  Services
-                </a>
+                <Link to="/aiengine" className="block text-white py-2">
+                  AI Engine
+                </Link>
               </li>
               <li>
-                <a href="#" className="block text-white py-2">
-                  Contact
-                </a>
+                <Link to="/login" className="block text-white py-2">
+                  Login
+                </Link>
               </li>
             </ul>
           </div>

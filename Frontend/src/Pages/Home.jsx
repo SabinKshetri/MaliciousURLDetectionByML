@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Detail from "../components/Detail";
+import OurTeam from "../components/OurTeam";
 
 const Home = () => {
   return (
@@ -20,15 +23,18 @@ const Home = () => {
             malicious activities, such as phishing, malware distribution, or
             scams.
           </p>
-
+          <Link to="/aiengine">
           <button
             type="button"
             className="mt-12 bg-transparent text-white text-base py-3 px-6 border border-white rounded-lg hover:bg-white hover:text-black transition duration-300"
           >
             Check Now
           </button>
+          </Link>
         </div>
       </div>
+      <Detail/>
+      <OurTeam/>
     </>
   );
 };
